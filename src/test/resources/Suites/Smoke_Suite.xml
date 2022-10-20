@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests" thread-count="3">
+    <!--    <parameter name="screenshot_capture_enabled" value="false"/>-->
+    <!--    <parameter name="hpesc-credits_screenshot_capture_enabled" value="true"/>-->
+    <!--    <parameter name="run_remotely" value="true"/>-->
+
+
+    <test name="001" parallel="classes">
+        <classes>
+            <class name="PlayWrightSessionDemo.PlayWrightBasicsDemo"/>
+        </classes>
+    </test>
+</suite>
