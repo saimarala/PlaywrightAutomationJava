@@ -17,6 +17,7 @@ public class FrameHandle {
         page.frameLocator("//iframe[contains(@id,'frame')]").locator("#RESULT_TextField-1").first().fill("test");
         //page.pause();
         page.navigate("https://selectorshub.com/xpath-practice-page/");
+        page.waitForLoadState();
 
 
     }
