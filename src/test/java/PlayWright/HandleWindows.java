@@ -12,12 +12,11 @@ public class HandleWindows {
         BrowserContext context = browser.newContext();
         Page page = context.newPage();
         page.navigate("https://freelance-learn-automation.vercel.app/login");
-        Page newPage=context.waitForPage(() -> {
+        Page newPage = context.waitForPage(() -> {
             page.locator("//a[contains(@href,'facebook')]").first().click();
         });
-        page.locator("input[name='email']").last().fill(new Faker().name().firstName());
+        newPage.locator("input[name='email']").last().fill(new Faker().name().firstName());
         page.bringToFront();
-
         newPage.bringToFront();
         page.close();
         context.close();
